@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(53,53,53);
+}
+.cell{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+#divBoard{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.active{
+    background-color: yellow;
+}
+/* .active1{
+    background-color: yellow;
+}
+.active2{
+    background-color: red;
+}
+.active3{
+    background-color: green;
+}
+.active4{
+    background-color: blue;
+} */
