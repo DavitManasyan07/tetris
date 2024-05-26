@@ -98,6 +98,26 @@ function newStart() {
   setIntMove = setInterval(() => {
     if (pauseNum === 0) {
       if (boolNewStart) {
+        if (!boolCheck) {
+          const next1Element = document.getElementById(active1Id);
+          const next2Element = document.getElementById(active2Id);
+          const next3Element = document.getElementById(active3Id);
+          const next4Element = document.getElementById(active4Id);
+
+          next1Element.classList.remove("1");
+          next2Element.classList.remove("1");
+          next3Element.classList.remove("1");
+          next4Element.classList.remove("1");
+        }
+
+        clearInterval(setIntMove);
+        newStart();
+        boolNewStart = false;
+        boolCheck = false;
+        boolMove = false;
+        return;
+      }
+      if (boolCheck) {
         const next1Element = document.getElementById(active1Id);
         const next2Element = document.getElementById(active2Id);
         const next3Element = document.getElementById(active3Id);
@@ -107,15 +127,6 @@ function newStart() {
         next2Element.classList.remove("1");
         next3Element.classList.remove("1");
         next4Element.classList.remove("1");
-        
-        clearInterval(setIntMove);
-        newStart();
-        boolNewStart = false;
-        boolCheck = false;
-        boolMove = false;
-        return;
-      }
-      if (boolCheck) {
         checking();
         boolNewStart = true;
         return;
@@ -123,10 +134,8 @@ function newStart() {
 
       boolChecking();
 
-      if (boolMove) {
-        if (!boolCheck) {
-          boolNewStart = true;
-        }
+      if (boolMove && !boolCheck) {
+        boolNewStart = true;
         return;
       }
       move();
@@ -754,7 +763,6 @@ function move(direction) {
     !canMoveDown(nextActive3Id) ||
     !canMoveDown(nextActive4Id)
   ) {
-
     if (active1Element.getAttribute("y") == 0) {
       clearInterval(setIntMove);
       alert("GAME OVER");
