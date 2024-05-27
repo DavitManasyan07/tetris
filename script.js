@@ -551,7 +551,6 @@ function canSpin(num) {
         return el != "1";
       })
     ) {
-      console.log(nextElementArr);
       return false;
     }
   } else {
@@ -567,7 +566,6 @@ function checkCanSpin() {
     !canSpin(active3Id) ||
     !canSpin(active4Id)
   ) {
-    console.log(1);
     return true;
   } else {
     return false;
