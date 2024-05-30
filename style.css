@@ -1,22 +1,22 @@
-body{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(53,53,53);
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(53, 53, 53);
 }
-.cell{
-    height: 30px;
-    width: 30px;
-    border: 1px solid black;
-    box-sizing: border-box;
+.cell {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  box-sizing: border-box;
 }
-#divBoard{
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    max-width: 300px;
+#divBoard {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  max-width: 300px;
 }
 
-.active{
-    background-color: yellow;
+.active {
+  background-color: yellow;
 }
