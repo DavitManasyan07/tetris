@@ -2,6 +2,8 @@ const StartBton = document.getElementById("StartBton");
 const RefreshBton = document.getElementById("RefreshBton");
 const PauseBton = document.getElementById("PauseBton");
 const board = document.getElementById("divBoard");
+const score = document.getElementById("score");
+let scoreNum = 0;
 let canStart = true;
 let active1Id = null;
 let active2Id = null;
@@ -70,6 +72,8 @@ RefreshBton.addEventListener("click", () => {
   canStart = true;
   PauseBton.innerText = "Pause";
   pauseNum = 0;
+  score.innerText = "0000";
+  scoreNum = 0;
   createBord();
 });
 //pause
@@ -83,6 +87,8 @@ PauseBton.addEventListener("click", () => {
   }
 });
 //functions
+
+score.innerText = "0000";
 
 function newStart() {
   figure1SpinNum = 0;
@@ -111,6 +117,16 @@ function newStart() {
         }
 
         clearInterval(setIntMove);
+        scoreNum += 10;
+        if (scoreNum < 10) {
+          score.innerText = "0000";
+        } else if (scoreNum < 100) {
+          score.innerText = "00" + scoreNum;
+        } else if (scoreNum < 1000) {
+          score.innerText = "0" + scoreNum;
+        } else {
+          score.innerText = scoreNum;
+        }
         newStart();
         boolNewStart = false;
         boolCheck = false;
@@ -196,6 +212,7 @@ function boolChecking() {
 }
 
 function checking() {
+  scoreNum += 100;
   let elementsIdArr;
   for (let y0 = 0; y0 < rowInpValue; y0++) {
     let numActiveelement = 0;
