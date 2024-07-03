@@ -33,3 +33,11 @@ body {
   width: 200px;
   font-size: 64px;
 }
+
+.buttons{
+  display: flex;
+  justify-content:space-between;
+}
+#StartBton,#StopBton,#RefreshBton,#PauseBton{
+font-size: 17px;
+}

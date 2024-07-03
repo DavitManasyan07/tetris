@@ -212,7 +212,6 @@ function boolChecking() {
 }
 
 function checking() {
-  scoreNum += 100;
   let elementsIdArr;
   for (let y0 = 0; y0 < rowInpValue; y0++) {
     let numActiveelement = 0;
@@ -223,6 +222,7 @@ function checking() {
         numActiveelement++;
       }
       if (numActiveelement === 10) {
+        scoreNum += 100;
         boolCheck = true;
         for (let x = 0; x < columnInpValue; x++) {
           document.getElementById(x + y0 * 10).classList.remove("active");
