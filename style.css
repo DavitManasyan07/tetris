@@ -1,7 +1,7 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: rgb(53, 53, 53);
+  background-color: #222831;
   height: 90vh;
 }
 .cell {
@@ -22,22 +22,34 @@ body {
   background-color: yellow;
 }
 .score{
-  position: relative;
-  left: 330px;
-  bottom: 510px;
-  border: 5px;
   display: grid;
   place-content: center;
   background-color: white;
   height: 100px;
   width: 200px;
   font-size: 64px;
+  margin-top: 250px;
+margin-left: 20px;
 }
 
 .buttons{
   display: flex;
-  justify-content:space-between;
+  flex-direction:column;
+  justify-content: space-evenly;
+  margin: 20px;
 }
 #StartBton,#StopBton,#RefreshBton,#PauseBton{
-font-size: 17px;
+font-size: 28px;
+width: auto;
+height: 50px;
+border-radius: 12px;
+}
+#StartBton:hover,#StopBton:hover,#RefreshBton:hover,#PauseBton:hover{
+  /* font-size: 32px; */
+  height: 55px;
+}
+
+.bodyy{
+  margin: 20px;
+  display: flex;
 }
