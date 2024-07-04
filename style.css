@@ -21,7 +21,7 @@ body {
 .active {
   background-color: yellow;
 }
-.score{
+.score {
   display: grid;
   place-content: center;
   background-color: white;
@@ -29,27 +29,32 @@ body {
   width: 200px;
   font-size: 64px;
   margin-top: 250px;
-margin-left: 20px;
+  margin-left: 20px;
 }
 
-.buttons{
+.buttons {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: space-evenly;
   margin: 20px;
 }
-#StartBton,#StopBton,#RefreshBton,#PauseBton{
-font-size: 28px;
-width: auto;
-height: 50px;
-border-radius: 12px;
+#StartBton,
+#StopBton,
+#RefreshBton,
+#PauseBton {
+  font-size: 28px;
+  width: auto;
+  height: 50px;
+  border-radius: 12px;
 }
-#StartBton:hover,#StopBton:hover,#RefreshBton:hover,#PauseBton:hover{
-  /* font-size: 32px; */
+#StartBton:hover,
+#StopBton:hover,
+#RefreshBton:hover,
+#PauseBton:hover {
   height: 55px;
 }
 
-.bodyy{
+.bodyy {
   margin: 20px;
   display: flex;
 }
