@@ -7,20 +7,15 @@ body {
 .cell {
   height: 30px;
   width: 30px;
-  border: 1px solid black;
   box-sizing: border-box;
 }
 #divBoard {
-  background-color: white;
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
   max-width: 300px;
 }
 
-.active {
-  background-color: yellow;
-}
 .score {
   display: grid;
   place-content: center;
@@ -58,4 +53,7 @@ body {
 .bodyy {
   margin: 20px;
   display: flex;
+}
+.active {
+  background-color: yellow;
 }
